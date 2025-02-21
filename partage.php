@@ -39,13 +39,13 @@ if (!empty($nomAmi) && !empty($email) && !empty($message)) {
         $mail->isSMTP();                                            //Permet d'utiliser le serveur SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Spécifier de serveur SMTP
         $mail->SMTPAuth   = true;                                   //Activer l'authentication SMTP
-        $mail->Username   = 'raphaelmauduit45@gmail.com';                     //SMTP username
-        $mail->Password   = 'ogsauoomvvuhtoin';                               //SMTP password
+        $mail->Username   = 'example@gmail.com';                     //SMTP username
+        $mail->Password   = '';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('raphaelmauduit45@gmail.com', 'LA MANU PHP');
+        $mail->setFrom('example@gmail.com', 'LA MANU PHP');
         $mail->addAddress($email, "$nomAmi");     //Add a recipient
         $mail->addReplyTo($email, "$nomAmi");
 
